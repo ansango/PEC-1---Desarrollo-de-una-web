@@ -20150,7 +20150,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/@fortawesome/fontawesome-free/css/all.css":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/@fortawesome/fontawesome-free/css/all.min.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -24605,7 +24605,7 @@ require("babel-polyfill");
 
 var _vue = _interopRequireDefault(require("vue"));
 
-var _all = _interopRequireDefault(require("@fortawesome/fontawesome-free/css/all.css"));
+var _allMin = _interopRequireDefault(require("@fortawesome/fontawesome-free/css/all.min.css"));
 
 var _App = _interopRequireDefault(require("./App"));
 
@@ -24613,18 +24613,16 @@ var _router = _interopRequireDefault(require("./router"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//import Bulma from "bulma/";
 _vue.default.config.productionTip = false;
 new _vue.default({
   el: "#app",
   router: _router.default,
-  //Bulma,
-  FontAwesome: _all.default,
+  FontAwesome: _allMin.default,
   render: function render(h) {
     return h(_App.default);
   }
 }).$mount("#app");
-},{"babel-polyfill":"../node_modules/babel-polyfill/lib/index.js","vue":"../node_modules/vue/dist/vue.common.js","@fortawesome/fontawesome-free/css/all.css":"../node_modules/@fortawesome/fontawesome-free/css/all.css","./App":"../src/App.vue","./router":"../src/router/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"babel-polyfill":"../node_modules/babel-polyfill/lib/index.js","vue":"../node_modules/vue/dist/vue.common.js","@fortawesome/fontawesome-free/css/all.min.css":"../node_modules/@fortawesome/fontawesome-free/css/all.min.css","./App":"../src/App.vue","./router":"../src/router/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -24652,7 +24650,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35809" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34593" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

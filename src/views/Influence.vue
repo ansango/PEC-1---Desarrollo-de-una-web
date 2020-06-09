@@ -58,15 +58,6 @@
           </ul>
         </div>
         <div class="author-gallery">
-          <!--<picture class="pic-container" v-for="(gallery, index) in person.gallery" :key="index">
-            <source media="(min-width:1024px)" :srcset="'https://www.w3schools.com/tags/img_pink_flowers.jpg'" />
-            <source media="(min-width:768px)" :srcset="'https://www.w3schools.com/tags/img_white_flower.jpg'" />
-            <img
-              :src="'https://www.w3schools.com/tags/img_orange_flowers.jpg'"
-              alt="Flowers"
-              style="width:auto;"
-            />
-          </picture>-->
           <div class="pic-container" v-for="(gallery, index) in person.gallery" :key="index">
             <img :src="gallery" :alt="person.author" />
           </div>
