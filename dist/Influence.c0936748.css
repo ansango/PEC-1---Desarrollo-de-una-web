@@ -1,0 +1,53 @@
+.hero .hero-body[data-v-ebe028] {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 1200px;
+}
+.section .container[data-v-ebe028] {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.title-hero[data-v-ebe028] {
+  padding-bottom: 20px;
+}
+.container-icons[data-v-ebe028] {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 50px;
+}
+.icons-hero[data-v-ebe028] {
+  margin: 20px;
+}
+@media (min-width: 768px) {
+.hero .hero-body .container[data-v-ebe028] {
+    width: 70%;
+}
+}
+.sub-section[data-v-ebe028] {
+  width: 768px !important;
+}
+.content-paragraph[data-v-ebe028] {
+  padding: 20px 0;
+}
+.author-head[data-v-ebe028] {
+  padding-bottom: 80px;
+}
+.avatar img[data-v-ebe028] {
+  width: 130px;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+}
+.author-biography[data-v-ebe028],
+.author-project[data-v-ebe028],
+.author-gallery[data-v-ebe028] {
+  padding: 50px 0;
+}
+.author-project h3[data-v-ebe028]{
+    font-weight: bold;
+}
+.pic-container[data-v-ebe028] {
+  padding: 20px 0;
+}

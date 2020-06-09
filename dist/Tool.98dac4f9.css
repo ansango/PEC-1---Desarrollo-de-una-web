@@ -1,0 +1,65 @@
+.hero .hero-body[data-v-3d3349] {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 1200px;
+}
+.section .container[data-v-3d3349] {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.sub-section[data-v-3d3349] {
+  width: 768px !important;
+}
+.head-subsection[data-v-3d3349] {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.head-subsection img[data-v-3d3349] {
+  width: 250px;
+}
+@media (max-width: 568px) {
+.head-subsection img[data-v-3d3349] {
+    width: 150px;
+}
+}
+@media (max-width: 360px) {
+.head-subsection img[data-v-3d3349] {
+    width: 100px;
+}
+}
+.head-subsection img[data-v-3d3349],
+h2[data-v-3d3349] {
+  padding: 20px;
+}
+.sub-section-tool[data-v-3d3349] {
+  width: 768px !important;
+  padding: 30px 0;
+}
+.title-hero[data-v-3d3349] {
+  padding-bottom: 20px;
+}
+.content-title[data-v-3d3349] {
+  font-weight: bold;
+}
+.content-paragraph[data-v-3d3349] {
+  padding: 20px 0;
+}
+.wrapper-video[data-v-3d3349] {
+  padding: 50px;
+}
+.link[data-v-3d3349] {
+  width: 100px;
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+}
+@media (min-width: 768px) {
+.hero .hero-body .container[data-v-3d3349] {
+    width: 70%;
+}
+}

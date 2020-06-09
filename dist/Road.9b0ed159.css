@@ -1,0 +1,73 @@
+.hero .hero-body[data-v-75497c] {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 1200px;
+}
+.section .container[data-v-75497c] {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.title-hero[data-v-75497c] {
+  padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+.hero .hero-body .container[data-v-75497c] {
+    width: 70%;
+}
+}
+.container-icons[data-v-75497c] {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 50px;
+}
+.icons-hero[data-v-75497c] {
+  margin: 20px;
+}
+.faqs[data-v-75497c] {
+  width: 768px !important;
+}
+ul[data-v-75497c] {
+  padding: 20px 0;
+}
+li[data-v-75497c] {
+  padding: 1px;
+}
+.question[data-v-75497c] {
+  font-weight: bold;
+}
+.cards[data-v-75497c] {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+}
+.block[data-v-75497c] {
+  border-radius: 6px;
+  display: block;
+  padding: 50px;
+  margin: 20px;
+  width: 251px;
+  height: 320px;
+  transition: transform 0.2s;
+}
+.block[data-v-75497c]:hover {
+  transform: scale(
+    1.05
+  );
+}
+.block-shadow[data-v-75497c] {
+  box-shadow: #957bd5 0 7px 25px 0;
+}
+.tool-name[data-v-75497c] {
+  padding-top: 50px;
+  word-break: break-all;
+  font-weight: bold;
+}

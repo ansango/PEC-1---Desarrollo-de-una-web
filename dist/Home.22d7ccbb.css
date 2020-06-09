@@ -1,0 +1,114 @@
+.section .container[data-v-af89da],
+.hero .hero-body[data-v-af89da],
+.hero .hero-head[data-v-af89da] {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/*
+Hero
+*/
+@media (min-width: 1024px) {
+.hero-body[data-v-af89da] {
+    background-image: url(/000.248bf7f5.svg);
+    background-size: 40%;
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+}
+.hero-body p[data-v-af89da] {
+    width: 600px;
+}
+}
+
+/*
+Features
+*/
+.feature-img[data-v-af89da] {
+  max-width: 60%;
+}
+.feature-text[data-v-af89da] {
+  margin: auto 0;
+}
+#features .container[data-v-af89da] {
+  padding: 50px;
+}
+.cols[data-v-af89da] {
+  padding: 50px 0;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.col img[data-v-af89da] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+}
+@media (max-width: 1023px) {
+.reverse-column-order[data-v-af89da] {
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+}
+}
+@media (min-width: 1024px) {
+.cols[data-v-af89da] {
+    display: -ms-flexbox;
+    display: flex;
+}
+.col[data-v-af89da] {
+    width: 50%;
+    margin: auto 0;
+}
+.reverse-row-order[data-v-af89da] {
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+}
+}
+
+/*
+Cards
+ */
+.card[data-v-af89da],
+.card b[data-v-af89da] {
+  border-radius: 30px;
+  margin: 50px 0;
+}
+.card-image img[data-v-af89da] {
+  border-radius: 30px 30px 0px 0px;
+  padding: 30px 30px 0 30px;
+}
+@media (min-width: 1024px) {
+.cards[data-v-af89da] {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.card[data-v-af89da] {
+    width: 30%;
+}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+.cards[data-v-af89da] {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.card[data-v-af89da] {
+    width: 45%;
+}
+}
+@media (max-width: 768px){
+#hero[data-v-af89da]{
+    margin-top: 130px;
+}
+}
