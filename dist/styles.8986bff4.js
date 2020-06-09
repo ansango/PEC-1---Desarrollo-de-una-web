@@ -117,332 +117,79 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../src/components/GoBack.vue":[function(require,module,exports) {
-"use strict";
+})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  name: 'GoBack',
-  methods: {
-    goBack: function goBack() {
-      return this.$router.go(-1);
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
     }
   }
-};
-exports.default = _default;
-        var $305435 = exports.default || module.exports;
-      
-      if (typeof $305435 === 'function') {
-        $305435 = $305435.options;
-      }
-    
-        /* template */
-        Object.assign($305435, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("span", { staticClass: "go-back" }, [
-    _c(
-      "button",
-      { staticClass: "btn violet-bg-primary", on: { click: _vm.goBack } },
-      [_c("i", [_vm._v("Volver")])]
-    )
-  ])
+
+  return '/';
 }
-var staticRenderFns = []
-render._withStripped = true
 
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: "data-v-305435",
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$305435', $305435);
-          } else {
-            api.reload('$305435', $305435);
-          }
-        }
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
 
-        
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-      }
-    })();
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"../src/views/Road.vue":[function(require,module,exports) {
-"use strict";
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
+function updateLink(link) {
+  var newLink = link.cloneNode();
 
-var _index = _interopRequireDefault(require("../store/index.js"));
+  newLink.onload = function () {
+    link.remove();
+  };
 
-var _GoBack = _interopRequireDefault(require("../components/GoBack.vue"));
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var cssTimeout = null;
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  name: "Road",
-  components: {
-    GoBack: _GoBack.default
-  },
-  props: {
-    slug: {
-      type: String,
-      required: true
-    }
-  },
-  computed: {
-    road: function road() {
-      var _this = this;
-
-      return _index.default.roadmap.find(function (road) {
-        return road.slug === _this.slug;
-      });
-    }
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
   }
-};
-exports.default = _default;
-        var $75497c = exports.default || module.exports;
-      
-      if (typeof $75497c === 'function') {
-        $75497c = $75497c.options;
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
       }
-    
-        /* template */
-        Object.assign($75497c, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "section",
-        {
-          staticClass: "section hero has-text-centered",
-          attrs: { id: "hero" }
-        },
-        [
-          _c("div", { staticClass: "hero-body" }, [
-            _c("div", { staticClass: "container" }, [
-              _c(
-                "h1",
-                {
-                  staticClass:
-                    "title title-hero is-1 text-secondary is-size-3-mobile"
-                },
-                [_vm._v(_vm._s(_vm.road.name))]
-              ),
-              _vm._v(" "),
-              _c("p", { staticClass: "subtitle is-4 text-secondary" }, [
-                _vm._v(_vm._s(_vm.road.resume))
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "container-icons" },
-              _vm._l(_vm.road.tools, function(tool) {
-                return _c("div", { key: tool.id }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "icons-hero is-size-3",
-                      attrs: { href: tool.url, target: "_blank" }
-                    },
-                    [_c("i", { class: "text-secondary " + " " + tool.icon })]
-                  )
-                ])
-              }),
-              0
-            )
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c("section", { staticClass: "section" }, [
-        _c(
-          "div",
-          { staticClass: "container faqs text-secondary" },
-          [
-            _c("h2", { staticClass: "title text-secondary is-2" }, [
-              _vm._v("FAQS")
-            ]),
-            _vm._v(" "),
-            _vm._l(_vm.road.faqs, function(faq) {
-              return _c("ul", { key: faq.id }, [
-                _c(
-                  "li",
-                  { staticClass: "question text-secondary title is-5" },
-                  [_vm._v(_vm._s(faq.question))]
-                ),
-                _vm._v(" "),
-                _c("li", { staticClass: "answer text-secondary subtitle" }, [
-                  _vm._v(_vm._s(faq.answer))
-                ])
-              ])
-            })
-          ],
-          2
-        )
-      ]),
-      _vm._v(" "),
-      _c(
-        "section",
-        { staticClass: "section cards has-text-centered" },
-        _vm._l(_vm.road.tools, function(tool) {
-          return _c(
-            "div",
-            { key: tool.slug, staticClass: "wrapper-icons" },
-            [
-              _c(
-                "router-link",
-                {
-                  attrs: {
-                    to: {
-                      name: "tool",
-                      params: { toolSlug: tool.slug },
-                      hash: "#tool"
-                    }
-                  }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "block zoom text-secondary block-shadow has-text-centered"
-                    },
-                    [
-                      _c("img", { attrs: { src: tool.image, alt: tool.name } }),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          staticClass: "tool-name text-secondary subtitle is-6"
-                        },
-                        [_vm._v(_vm._s(tool.name))]
-                      )
-                    ]
-                  )
-                ]
-              )
-            ],
-            1
-          )
-        }),
-        0
-      ),
-      _vm._v(" "),
-      _c("router-view", { key: _vm.$route.path })
-    ],
-    1
-  )
+    }
+
+    cssTimeout = null;
+  }, 50);
 }
-var staticRenderFns = []
-render._withStripped = true
 
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: "data-v-75497c",
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$75497c', $75497c);
-          } else {
-            api.reload('$75497c', $75497c);
-          }
-        }
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"styles.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
 
-        
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-      }
-    })();
-},{"../store/index.js":"../src/store/index.js","../components/GoBack.vue":"../src/components/GoBack.vue","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -647,4 +394,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/Road.9b0ed159.js.map
+//# sourceMappingURL=/styles.8986bff4.js.map

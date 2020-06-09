@@ -1,16 +1,16 @@
-import 'babel-polyfill';
-import Vue from 'vue'
-import Bulma from 'bulma';
-import FontAwesome from '@fortawesome/fontawesome-free/css/all.css'
-import App from './App'
-import router from './router'
+import "babel-polyfill";
+import Vue from "vue";
+//import Bulma from "bulma/";
+import FontAwesome from "@fortawesome/fontawesome-free/css/all.css";
+import App from "./App";
+import router from "./router";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
-  el: '#app',
+  el: "#app",
   router,
-  Bulma,
+  //Bulma,
   FontAwesome,
-  render: h => h(App)
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");

@@ -20150,13 +20150,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/bulma/bulma.sass":[function(require,module,exports) {
-
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/@fortawesome/fontawesome-free/css/all.css":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/@fortawesome/fontawesome-free/css/all.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -20626,10 +20620,10 @@ module.exports = "/0200.ca11a08d.jpg";
 module.exports = "/0201.f5c7e222.jpg";
 },{}],"../src/assets/influence/0202.jpg":[function(require,module,exports) {
 module.exports = "/0202.0e737e7d.jpg";
-},{}],"../src/assets/influence/0300.jpg":[function(require,module,exports) {
-module.exports = "/0300.001b05c0.jpg";
 },{}],"../src/assets/influence/0203.jpg":[function(require,module,exports) {
 module.exports = "/0203.73a5a11f.jpg";
+},{}],"../src/assets/influence/0300.jpg":[function(require,module,exports) {
+module.exports = "/0300.001b05c0.jpg";
 },{}],"../src/assets/influence/0301.jpg":[function(require,module,exports) {
 module.exports = "/0301.76ef5fa2.jpg";
 },{}],"../src/assets/influence/0302.jpg":[function(require,module,exports) {
@@ -20645,13 +20639,13 @@ module.exports = {
   "0200": require("./0200.jpg"),
   "0201": require("./0201.jpg"),
   "0202": require("./0202.jpg"),
-  "0300": require("./0300.jpg"),
   "0203": require("./0203.jpg"),
+  "0300": require("./0300.jpg"),
   "0301": require("./0301.jpg"),
   "0302": require("./0302.jpg"),
   "0303": require("./0303.jpg")
 };
-},{"./0100.jpg":"../src/assets/influence/0100.jpg","./0101.jpg":"../src/assets/influence/0101.jpg","./0102.jpg":"../src/assets/influence/0102.jpg","./0103.jpg":"../src/assets/influence/0103.jpg","./0200.jpg":"../src/assets/influence/0200.jpg","./0201.jpg":"../src/assets/influence/0201.jpg","./0202.jpg":"../src/assets/influence/0202.jpg","./0300.jpg":"../src/assets/influence/0300.jpg","./0203.jpg":"../src/assets/influence/0203.jpg","./0301.jpg":"../src/assets/influence/0301.jpg","./0302.jpg":"../src/assets/influence/0302.jpg","./0303.jpg":"../src/assets/influence/0303.jpg"}],"../src/store/index.js":[function(require,module,exports) {
+},{"./0100.jpg":"../src/assets/influence/0100.jpg","./0101.jpg":"../src/assets/influence/0101.jpg","./0102.jpg":"../src/assets/influence/0102.jpg","./0103.jpg":"../src/assets/influence/0103.jpg","./0200.jpg":"../src/assets/influence/0200.jpg","./0201.jpg":"../src/assets/influence/0201.jpg","./0202.jpg":"../src/assets/influence/0202.jpg","./0203.jpg":"../src/assets/influence/0203.jpg","./0300.jpg":"../src/assets/influence/0300.jpg","./0301.jpg":"../src/assets/influence/0301.jpg","./0302.jpg":"../src/assets/influence/0302.jpg","./0303.jpg":"../src/assets/influence/0303.jpg"}],"../src/store/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24611,8 +24605,6 @@ require("babel-polyfill");
 
 var _vue = _interopRequireDefault(require("vue"));
 
-var _bulma = _interopRequireDefault(require("bulma"));
-
 var _all = _interopRequireDefault(require("@fortawesome/fontawesome-free/css/all.css"));
 
 var _App = _interopRequireDefault(require("./App"));
@@ -24621,17 +24613,18 @@ var _router = _interopRequireDefault(require("./router"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//import Bulma from "bulma/";
 _vue.default.config.productionTip = false;
 new _vue.default({
-  el: '#app',
+  el: "#app",
   router: _router.default,
-  Bulma: _bulma.default,
+  //Bulma,
   FontAwesome: _all.default,
   render: function render(h) {
     return h(_App.default);
   }
-}).$mount('#app');
-},{"babel-polyfill":"../node_modules/babel-polyfill/lib/index.js","vue":"../node_modules/vue/dist/vue.common.js","bulma":"../node_modules/bulma/bulma.sass","@fortawesome/fontawesome-free/css/all.css":"../node_modules/@fortawesome/fontawesome-free/css/all.css","./App":"../src/App.vue","./router":"../src/router/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+}).$mount("#app");
+},{"babel-polyfill":"../node_modules/babel-polyfill/lib/index.js","vue":"../node_modules/vue/dist/vue.common.js","@fortawesome/fontawesome-free/css/all.css":"../node_modules/@fortawesome/fontawesome-free/css/all.css","./App":"../src/App.vue","./router":"../src/router/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -24659,7 +24652,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43141" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41589" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
