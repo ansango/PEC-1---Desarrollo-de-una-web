@@ -2,9 +2,15 @@
   <div id="influence">
     <section id="hero" class="section hero has-text-centered">
       <div class="hero-body">
-        <div class="container" v-for="dataHero in influenceData.hero" :key="dataHero.id">
-          <h1 class="title title-hero is-1 text-secondary is-size-3-mobile">{{dataHero.title}}</h1>
-          <p class="subtitle is-4 text-secondary">{{dataHero.subtitle}}</p>
+        <div
+          class="container"
+          v-for="dataHero in influenceData.hero"
+          :key="dataHero.id"
+        >
+          <h1 class="title title-hero is-1 text-secondary is-size-3-mobile">
+            {{ dataHero.title }}
+          </h1>
+          <p class="subtitle is-4 text-secondary">{{ dataHero.subtitle }}</p>
         </div>
         <div class="container-icons">
           <div v-for="person in influenceData.info" :key="person.id">
@@ -15,18 +21,26 @@
         </div>
       </div>
     </section>
-    <section class="section" v-for="person in influenceData.info" :key="person.id">
+    <section
+      class="section"
+      v-for="person in influenceData.info"
+      :key="person.id"
+    >
       <div class="container sub-section">
         <div class="author-head has-text-centered">
-          <h2 class="title text-secondary is-2">{{person.author}}</h2>
+          <h2 class="title text-secondary is-2">{{ person.author }}</h2>
           <div class="avatar">
             <img :src="person.avatar" :alt="person.author" />
           </div>
         </div>
 
         <div class="author-biography">
-          <p class="subtitle is-5 text-secondary">{{person.biography.paragraph1}}</p>
-          <p class="subtitle is-5 text-secondary">{{person.biography.paragraph2}}</p>
+          <p class="subtitle is-5 text-secondary">
+            {{ person.biography.paragraph1 }}
+          </p>
+          <p class="subtitle is-5 text-secondary">
+            {{ person.biography.paragraph2 }}
+          </p>
         </div>
         <div class="author-project">
           <h3 class="subtitle is-4 text-secondary">Proyectos:</h3>
@@ -39,11 +53,20 @@
               <span class="icons-hero is-size-3">
                 <i :class="'text-secondary ' + ' ' + person.icon"></i>
               </span>
-              <span>{{project}}</span>
+              <span>{{ project }}</span>
             </li>
           </ul>
         </div>
         <div class="author-gallery">
+          <!--<picture class="pic-container" v-for="(gallery, index) in person.gallery" :key="index">
+            <source media="(min-width:1024px)" :srcset="'https://www.w3schools.com/tags/img_pink_flowers.jpg'" />
+            <source media="(min-width:768px)" :srcset="'https://www.w3schools.com/tags/img_white_flower.jpg'" />
+            <img
+              :src="'https://www.w3schools.com/tags/img_orange_flowers.jpg'"
+              alt="Flowers"
+              style="width:auto;"
+            />
+          </picture>-->
           <div class="pic-container" v-for="(gallery, index) in person.gallery" :key="index">
             <img :src="gallery" :alt="person.author" />
           </div>
@@ -59,12 +82,11 @@ export default {
   name: "Influence",
   data() {
     return {
-      influenceData: store.influenceData
+      influenceData: store.influenceData,
     };
-  }
+  },
 };
 </script>
-
 
 <style scoped>
 .hero .hero-body {
@@ -120,8 +142,8 @@ export default {
   padding: 50px 0;
 }
 
-.author-project h3{
-    font-weight: bold;
+.author-project h3 {
+  font-weight: bold;
 }
 
 .pic-container {

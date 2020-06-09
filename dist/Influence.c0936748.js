@@ -184,6 +184,29 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   name: "Influence",
   data: function data() {
@@ -231,7 +254,11 @@ exports.default = _default;
                         staticClass:
                           "title title-hero is-1 text-secondary is-size-3-mobile"
                       },
-                      [_vm._v(_vm._s(dataHero.title))]
+                      [
+                        _vm._v(
+                          "\n          " + _vm._s(dataHero.title) + "\n        "
+                        )
+                      ]
                     ),
                     _vm._v(" "),
                     _c("p", { staticClass: "subtitle is-4 text-secondary" }, [
@@ -274,11 +301,19 @@ exports.default = _default;
             _vm._v(" "),
             _c("div", { staticClass: "author-biography" }, [
               _c("p", { staticClass: "subtitle is-5 text-secondary" }, [
-                _vm._v(_vm._s(person.biography.paragraph1))
+                _vm._v(
+                  "\n          " +
+                    _vm._s(person.biography.paragraph1) +
+                    "\n        "
+                )
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "subtitle is-5 text-secondary" }, [
-                _vm._v(_vm._s(person.biography.paragraph2))
+                _vm._v(
+                  "\n          " +
+                    _vm._s(person.biography.paragraph2) +
+                    "\n        "
+                )
               ])
             ]),
             _vm._v(" "),
@@ -387,7 +422,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46335" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43141" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
