@@ -1,6 +1,6 @@
 import "babel-polyfill";
 import Vue from "vue";
-import FontAwesome from "@fortawesome/fontawesome-free/css/all.min.css";
+import FontAwesome from "@fortawesome/fontawesome-free/css/all.css";
 import App from "./App";
 import router from "./router";
 

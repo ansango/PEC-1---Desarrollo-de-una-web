@@ -20534,10 +20534,10 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"../src/assets/000.svg":[function(require,module,exports) {
-module.exports = "/000.248bf7f5.svg";
-},{}],"../src/assets/001.svg":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"../src/assets/001.svg":[function(require,module,exports) {
 module.exports = "/001.daab17b6.svg";
+},{}],"../src/assets/000.svg":[function(require,module,exports) {
+module.exports = "/000.248bf7f5.svg";
 },{}],"../src/assets/002.svg":[function(require,module,exports) {
 module.exports = "/002.017ad35d.svg";
 },{}],"../src/assets/003.svg":[function(require,module,exports) {
@@ -20552,14 +20552,14 @@ module.exports = "/006.d99e47de.svg";
 module.exports = "/error.214401d2.svg";
 },{}],"../src/assets/logo.svg":[function(require,module,exports) {
 module.exports = "/logo.0c0680ff.svg";
-},{}],"../src/assets/logo_foot.svg":[function(require,module,exports) {
-module.exports = "/logo_foot.4671c827.svg";
 },{}],"../src/assets/logo_white.svg":[function(require,module,exports) {
 module.exports = "/logo_white.768ae7a7.svg";
+},{}],"../src/assets/logo_foot.svg":[function(require,module,exports) {
+module.exports = "/logo_foot.4671c827.svg";
 },{}],"../src/assets/*.svg":[function(require,module,exports) {
 module.exports = {
-  "000": require("./000.svg"),
   "001": require("./001.svg"),
+  "000": require("./000.svg"),
   "002": require("./002.svg"),
   "003": require("./003.svg"),
   "004": require("./004.svg"),
@@ -20567,10 +20567,10 @@ module.exports = {
   "006": require("./006.svg"),
   "error": require("./error.svg"),
   "logo": require("./logo.svg"),
-  "logo_foot": require("./logo_foot.svg"),
-  "logo_white": require("./logo_white.svg")
+  "logo_white": require("./logo_white.svg"),
+  "logo_foot": require("./logo_foot.svg")
 };
-},{"./000.svg":"../src/assets/000.svg","./001.svg":"../src/assets/001.svg","./002.svg":"../src/assets/002.svg","./003.svg":"../src/assets/003.svg","./004.svg":"../src/assets/004.svg","./005.svg":"../src/assets/005.svg","./006.svg":"../src/assets/006.svg","./error.svg":"../src/assets/error.svg","./logo.svg":"../src/assets/logo.svg","./logo_foot.svg":"../src/assets/logo_foot.svg","./logo_white.svg":"../src/assets/logo_white.svg"}],"../src/assets/roadmap/0100.png":[function(require,module,exports) {
+},{"./001.svg":"../src/assets/001.svg","./000.svg":"../src/assets/000.svg","./002.svg":"../src/assets/002.svg","./003.svg":"../src/assets/003.svg","./004.svg":"../src/assets/004.svg","./005.svg":"../src/assets/005.svg","./006.svg":"../src/assets/006.svg","./error.svg":"../src/assets/error.svg","./logo.svg":"../src/assets/logo.svg","./logo_white.svg":"../src/assets/logo_white.svg","./logo_foot.svg":"../src/assets/logo_foot.svg"}],"../src/assets/roadmap/0100.png":[function(require,module,exports) {
 module.exports = "/0100.7c2fa962.png";
 },{}],"../src/assets/roadmap/0101.png":[function(require,module,exports) {
 module.exports = "/0101.8fa8b0af.png";
@@ -24650,7 +24650,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34593" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44667" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
