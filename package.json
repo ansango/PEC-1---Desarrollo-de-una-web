@@ -10,7 +10,7 @@
     "parcel:build": "parcel build public/index.html",
     "watch": "parcel watch index.html",
     "clean": "rimraf dist .cache .cache-loader",
-    "css-build": "node-sass --omit-source-map-url  src/styles/bulmaConfig.scss public/styles.css"
+    "css-build": "node-sass --omit-source-map-url  src/styles/index.scss public/styles.css"
   },
   "keywords": [
     "parcel",
